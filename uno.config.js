@@ -15,20 +15,28 @@ export default defineConfig({
 
   theme: {
     colors: {
-      'primary': '#FF5600',
-      'primary-light': '#D96F19',
-      'primary-dark': '#DD5411',
-      'brand': '#6DB4BA',
-      'brand-lighter': '#D7EDF0',
-      'brand-light': '#6AC4C5',
-      'brand-dark': '#4A9FA7', 
-      'brand-darker': '#3366A2',
-      'warning': '#FFB428',
-      'warning-light': '#FFD79B',
+      'primary': {
+        light:'#D96F19',
+        DEFAULT:'#FF5600',
+        dark:'#DD5411',
+      }, 
+      'brand': {
+        lighter: '#D7EDF0',
+        light: '#6AC4C5',
+        DEFAULT: '#6DB4BA',
+        dark:'#4A9FA7',
+        darker:'#3366A2',
+      },
+      'warning': {
+        light: '#FFD79B',
+        DEFAULT: '#FFB428',
+      },
+      'gray': {
+        100:'#F7F7F7',
+        400:'#9E9E9E',
+        900:'#434343',
+      },
       'bg-light': '#F3FBFF',
-      'gray-100': '#F7F7F7',
-      'gray-400': '#9E9E9E',
-      'gray-900': '#434343',
     },
     fontFamily: {
       sans: ['Noto Sans TC', 'sans-serif'],

@@ -1,6 +1,41 @@
-<script lang="ts" setup></script>
+<script setup>
+import { ref } from "vue";
 
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
+
+</script>
 <template>
+  <div class="flex flex-col items-center fixed inset-y-30 right-0 z-1">
+    <button
+      type="button"
+      class="bg-brand border-0 text-white text-5 font-600 write-vertical-left tracking-widest rounded-tl-4 py-25px px-18px cursor-pointer hover:bg-brand-dark"
+    >
+      <img src="/location-call.svg" alt="呼叫代駕icon" />
+      呼叫代駕
+    </button>
+    <button
+      type="button"
+      class="bg-warning border-0 text-white text-5 font-600 write-vertical-left tracking-widest rounded-bl-4 py-25px px-18px cursor-pointer hover:bg-primary flex items-center"
+    >
+      <img class="mb-2" src="/order.svg" alt="訂單查詢icon" />
+      訂單查詢
+    </button>
+    <div class="bg-brand flex flex-col items-center justify-center mt-200px">
+      <button
+        type="button"
+        class="border-0 bg-transparent w-50px h-50px hover:bg-brand-dark cursor-pointer"
+        @click="scrollToTop"
+      >
+        <img src="/arrow-top.svg" alt="向上的箭頭" />
+        <p class="text-white font-700">Top</p>
+      </button>
+    </div>
+  </div>
   <section>
     <div
       class="flex items-end w-full bg-center bg-cover h-320px"
@@ -12,18 +47,25 @@
       </div>
     </div>
   </section>
-  <section
-    class="bg-top bg-no-repeat"
-    style="background-image: url(/tellphone.svg); background-position: right"
-  >
-    <div class="flex-col mx-auto text-center py-20 max-w-1024px">
+  <section>
+    <div
+      class="flex-col mx-auto text-center py-20 max-w-1024px position-relative"
+    >
       <h3 class="text-brand-dark text-9 font-bold mb-5">格上租車 X 台灣代駕</h3>
       <hr class="mb-5" style="width: 265px" />
       <p class="text-brand text-6 font-medium mb-20">專業專注 與您同行</p>
+      <PageTitle title="主管/公務車駕駛四大優勢1" />
+      <PageTitle title="主管/公務車駕駛四大優勢2" color="text-red-500" />
+      <PageTitle title="主管/公務車駕駛四大優勢3" fontSize="20px" />
       <h2 class="title mb-20">主管/公務車駕駛四大優勢</h2>
       <p class="text-gray-900 text-5 text-left lh-40px">
         依據客戶不同需求，以派遣方式提供客戶駕駛服務，服務涵蓋長/短期、外語專長…等公務車/主管駕駛派遣，客戶可免除招募、訓練、管理司機之繁複手續，由格上專業團隊為您代勞。
       </p>
+      <img
+        class="position-absolute top-133px right-[-200px] w-367px h-287px"
+        src="/tellphone.svg"
+        alt="雙手握手機"
+      />
     </div>
     <div>
       <img class="w-full" src="/bg-line.svg" alt="裝飾線條" />
@@ -44,7 +86,7 @@
         <p>需有職業駕照、良民證、無肇事紀錄與品格審查…等，以業界高標進行審核</p>
       </div>
       <div class="position-relative">
-        <img class="h-250px" src="/driver.jpg" alt="" />
+        <img class="h-250px" src="/driver.jpg" alt="開車司機" />
         <p
           class="position-absolute left-[4px] bottom-[-10px] text-white text-center text-18px bg-[#26ADD7] bg-op-50 px-14px py-2 z-1"
         >
@@ -55,8 +97,13 @@
         ></p>
       </div>
     </div>
-    <div>
-      <img src="/circleselect.svg" alt="" />
+    <div class="position-relative">
+      <img
+        class="position-absolute top-222px right-[-140px]"
+        src="/deco-arrow.svg"
+        alt="向右的箭頭"
+      />
+      <img src="/circleselect.svg" alt="甄選制度插圖" />
       <h2 class="text-warning text-9 font-500 mb-30px">甄選制度</h2>
       <p class="text-gray-900 lh-40px flex items-center">
         <span
@@ -136,97 +183,141 @@
       </div>
     </div>
   </section>
-  <section class="w-full bg-gray-100">
+  <section class="w-full bg-gray-100 pb-20">
     <h2 class="title pt-15 pb-15">預約流程</h2>
     <div class="lg:w-7/8 gap-[52px] mx-auto flex pb-20">
-      <div class="lg:w-18% flex flex-col justify-center items-center bg-white p-10px rounded-3 border-solid border-1 border-brand">
+      <div
+        class="lg:w-18% flex flex-col justify-center items-center bg-white p-10px rounded-3 border-solid border-1 border-brand"
+      >
         <div class="flex w-full justify-between items-center">
-          <div
-            class="bg-gray-400 w-1 h-1 rounded-full inline-block mr-2"
-          ></div>
-          <div
-            class="bg-gray-400 w-1 h-1 rounded-full inline-block mr-2"
-          ></div>
+          <div class="bg-gray-400 w-1 h-1 rounded-full inline-block mr-2"></div>
+          <div class="bg-gray-400 w-1 h-1 rounded-full inline-block mr-2"></div>
         </div>
         <p class="text-warning text-6 text-center mt-2 mb-3">Step1</p>
         <img class="mb-2" src="/reserve01.png" alt="" />
         <h5 class="text-gray-900 font-bold text-center mb-2">選擇接駁方案</h5>
         <div class="flex w-full justify-between items-center">
-          <div
-            class="bg-gray-400 w-1 h-1 rounded-full inline-block mr-2"
-          ></div>
-          <div
-            class="bg-gray-400 w-1 h-1 rounded-full inline-block mr-2"
-          ></div>
+          <div class="bg-gray-400 w-1 h-1 rounded-full inline-block mr-2"></div>
+          <div class="bg-gray-400 w-1 h-1 rounded-full inline-block mr-2"></div>
         </div>
       </div>
-      <img src="/arrowright.svg" alt="向右箭頭">
-      <div class="lg:w-18% flex flex-col justify-center items-center bg-white p-10px rounded-3 border-solid border-1 border-brand">
+      <img src="/arrowright.svg" alt="向右箭頭" />
+      <div
+        class="lg:w-18% flex flex-col justify-center items-center bg-white p-10px rounded-3 border-solid border-1 border-brand"
+      >
         <div class="flex w-full justify-between items-center">
-          <div
-            class="bg-gray-400 w-1 h-1 rounded-full inline-block mr-2"
-          ></div>
-          <div
-            class="bg-gray-400 w-1 h-1 rounded-full inline-block mr-2"
-          ></div>
+          <div class="bg-gray-400 w-1 h-1 rounded-full inline-block mr-2"></div>
+          <div class="bg-gray-400 w-1 h-1 rounded-full inline-block mr-2"></div>
         </div>
         <p class="text-warning text-6 text-center mt-2 mb-3">Step2</p>
         <img class="mb-2" src="/reserve02.png" alt="" />
         <h5 class="text-gray-900 font-bold text-center mb-2">填寫資料</h5>
         <div class="flex w-full justify-between items-center">
-          <div
-            class="bg-gray-400 w-1 h-1 rounded-full inline-block mr-2"
-          ></div>
-          <div
-            class="bg-gray-400 w-1 h-1 rounded-full inline-block mr-2"
-          ></div>
+          <div class="bg-gray-400 w-1 h-1 rounded-full inline-block mr-2"></div>
+          <div class="bg-gray-400 w-1 h-1 rounded-full inline-block mr-2"></div>
         </div>
       </div>
-      <img src="/arrowright.svg" alt="向右箭頭">
-      <div class="lg:w-18% flex flex-col justify-center items-center bg-white p-10px rounded-3 border-solid border-1 border-brand">
+      <img src="/arrowright.svg" alt="向右箭頭" />
+      <div
+        class="lg:w-18% flex flex-col justify-center items-center bg-white p-10px rounded-3 border-solid border-1 border-brand"
+      >
         <div class="flex w-full justify-between items-center">
-          <div
-            class="bg-gray-400 w-1 h-1 rounded-full inline-block mr-2"
-          ></div>
-          <div
-            class="bg-gray-400 w-1 h-1 rounded-full inline-block mr-2"
-          ></div>
+          <div class="bg-gray-400 w-1 h-1 rounded-full inline-block mr-2"></div>
+          <div class="bg-gray-400 w-1 h-1 rounded-full inline-block mr-2"></div>
         </div>
         <p class="text-warning text-6 text-center mt-2 mb-3">Step3</p>
         <img class="mb-2" src="/reserve03.png" alt="" />
         <h5 class="text-gray-900 font-bold text-center mb-2">進行付款</h5>
         <div class="flex w-full justify-between items-center">
-          <div
-            class="bg-gray-400 w-1 h-1 rounded-full inline-block mr-2"
-          ></div>
-          <div
-            class="bg-gray-400 w-1 h-1 rounded-full inline-block mr-2"
-          ></div>
+          <div class="bg-gray-400 w-1 h-1 rounded-full inline-block mr-2"></div>
+          <div class="bg-gray-400 w-1 h-1 rounded-full inline-block mr-2"></div>
         </div>
       </div>
-      <img src="/arrowright.svg" alt="向右箭頭">
-      <div class="lg:w-18% flex flex-col justify-center items-center bg-white p-10px rounded-3 border-solid border-1 border-brand">
+      <img src="/arrowright.svg" alt="向右箭頭" />
+      <div
+        class="lg:w-18% flex flex-col justify-center items-center bg-white p-10px rounded-3 border-solid border-1 border-brand"
+      >
         <div class="flex w-full justify-between items-center">
-          <div
-            class="bg-gray-400 w-1 h-1 rounded-full inline-block mr-2"
-          ></div>
-          <div
-            class="bg-gray-400 w-1 h-1 rounded-full inline-block mr-2"
-          ></div>
+          <div class="bg-gray-400 w-1 h-1 rounded-full inline-block mr-2"></div>
+          <div class="bg-gray-400 w-1 h-1 rounded-full inline-block mr-2"></div>
         </div>
         <p class="text-warning text-6 text-center mt-2 mb-3">Step4</p>
         <img class="mb-2" src="/reserve04.png" alt="" />
         <h5 class="text-gray-900 font-bold text-center mb-2">完成預約</h5>
         <div class="flex w-full justify-between items-center">
-          <div
-            class="bg-gray-400 w-1 h-1 rounded-full inline-block mr-2"
-          ></div>
-          <div
-            class="bg-gray-400 w-1 h-1 rounded-full inline-block mr-2"
-          ></div>
+          <div class="bg-gray-400 w-1 h-1 rounded-full inline-block mr-2"></div>
+          <div class="bg-gray-400 w-1 h-1 rounded-full inline-block mr-2"></div>
         </div>
       </div>
     </div>
+    <button
+      class="flex items-center mx-auto bg-primary border-0 rounded-full px-4 py-[10px] cursor-pointer hover:bg-primary-dark"
+      type="button"
+    >
+      <a
+        class="flex items-center text-white text-5 font-700 no-underline"
+        href=""
+      >
+        <img class="me-1" src="/callicon.svg" alt="呼叫代駕按鈕" />
+        呼叫代駕
+      </a>
+    </button>
+  </section>
+  <section>
+    <div class="flex flex-col mx-auto text-center py-20 max-w-1024px">
+      <h3 class="text-brand-dark text-9 font-bold mb-5">格上租車 X 台灣代駕</h3>
+      <hr class="mb-5" style="width: 265px" />
+      <p class="text-brand text-6 font-medium mb-20">專業專注 與您同行</p>
+      <h2 class="title mb-20">代駕起步費用計算(台幣/元)</h2>
+    </div>
+    <ul class="flex justify-center items-center mx-auto lg:w-7/8 gap-40px mb-6">
+      <li class="flex flex-col justify-center items-center lg:w-1/3">
+        <img class="mb-2" src="/clock01.svg" alt="全時段" />
+        <p class="text-brand text-center font-600 mb-2">全時段</p>
+        <div class="w-full bg-brand-light rounded-full">
+          <p class="text-white text-center py-5px">3公里內 $300</p>
+        </div>
+      </li>
+      <li class="flex flex-col justify-center items-center lg:w-1/3">
+        <img class="mb-2" src="/clock02.svg" alt="07:00 - 23:59" />
+        <p class="text-brand text-center font-600 mb-2">07:00 - 23:59</p>
+        <div class="w-full bg-gray-900 rounded-full">
+          <p class="text-white text-center py-5px">10公里內 $450</p>
+        </div>
+      </li>
+      <li class="flex flex-col justify-center items-center lg:w-1/3">
+        <img class="mb-2" src="/clock03.svg" alt="00:00 - 06:00" />
+        <p class="text-brand text-center font-600 mb-2">00:00 - 06:00</p>
+        <div class="w-full bg-primary-dark rounded-full">
+          <p class="text-white text-center py-5px">10公里內 $550</p>
+        </div>
+      </li>
+    </ul>
+    <ol class="lg:w-7/8 mx-auto pb-30 position-relative">
+      <li class="lh-loose text-gray-900">
+        1. 格上租車與台灣代駕為事業策略夥伴， 攜手伴您平安回家。
+      </li>
+      <li class="lh-loose text-gray-900">
+        2.
+        起步價時段，依照實際出發開車時間為準。累計里程計費，行駛超過10公里，每1公里加收50，行駛超過30公里，每2公里加收50，未滿1公里以1公里計費。
+      </li>
+      <li class="lh-loose text-gray-900">
+        3. 司機抵達後等候未滿20分鐘不收費，滿20分鐘加收50元，之後每分鐘加收5元。
+      </li>
+      <li class="lh-loose text-gray-900">
+        4.
+        格上租車與台灣代駕保留隨時修改、變更、暫停或終止本服務內容之權利，並以雙方網站公告為準。
+      </li>
+      <li class="lh-loose text-gray-900">
+        5. 欲知更多代駕介紹，請點擊『 服務說明 』。
+      </li>
+      <li class="lh-loose text-gray-900">
+        6. 如欲進一步瞭解服務內容，可撥打0800-005-209洽詢台灣代駕客服專線。
+      </li>
+      <li class="position-absolute right-0 top-10">
+        <img src="/handwithhand.svg" alt="手握手" />
+      </li>
+    </ol>
   </section>
 </template>
 

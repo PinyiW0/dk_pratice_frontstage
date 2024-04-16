@@ -1,9 +1,10 @@
 <script lang="ts" setup></script>
 
 <template>
-  <div>
+  <div class="w-screen h-100dvh">
     <LayoutHeaderItem />
-    <slot />
+    <slot class="overflow-y-auto" />
+    <LayoutFooterItem />
   </div>
 </template>
 
