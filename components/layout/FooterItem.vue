@@ -3,7 +3,8 @@
 <template>
   <div>
     <div class="w-full bg-brand h-5px"></div>
-    <nav class="w-full flex justify-between bg-brand-lighter">
+    <nav class="w-full bg-brand-lighter">
+      <div class="w-11/12 flex justify-between items-center mx-auto">
       <ul class="flex items-center p-5">
         <li>
           <nuxt-link to="/" class="p-4 no-underline text-brand-darker font-600">
@@ -38,10 +39,13 @@
           </a>
         </li>
       </ul>
+      </div>
+      
     </nav>
     <div class="w-full bg-brand flex justify-center items-center">
+      <div class="w-11/12 flex justify-center items-center">
       <p class="text-white text-18px me-30px py-8">格上汽車租賃股份有限公司 版權所有嚴禁翻版、轉載、盜用</p>
-      <p class="text-white text-18px py-8">Copyright © 2023 All Rights Reserved.</p>
+      <p class="text-white text-18px py-8">Copyright © 2023 All Rights Reserved.</p></div> 
     </div>
   </div>
 </template>

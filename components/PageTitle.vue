@@ -11,10 +11,18 @@ const props = defineProps({
   fontSize: {
     type: String,
     default: () => '10'
+  },
+  pt: {
+    type: String,
+    default: () => '0'
+  },
+  pb: {
+    type: String,
+    default: () => '0'
   }
 });
 </script>
 
 <template>
-  <p :class="color,`text-${fontSize}`" class="text-center font-bold">{{props.title}}</p>
+  <p :class="color,`text-${fontSize}`,`pt-${pt}`,`pb-${pb}`" class="text-center font-bold mb-20">{{props.title}}</p>
 </template>

@@ -45,7 +45,6 @@ export default defineConfig({
   shortcuts: {
     'btn-primary': ['border-0', 'bg-primary-dark', 'text-white', 'font-600', 'rounded-full', 'py-8px', 'px-20px', 'hover:border-white-1px', 'cursor-pointer', 'hover:bg-primary', 'hover:text-white'],
     'page-link': ['no-underline', 'appearance-none', 'bg-transparent', 'border-none', 'text-18px', 'text-gray-900', 'font-600', 'cursor-pointer', 'hover:text-primary'],
-    'title': ['text-gray-900', 'text-10', 'text-center', 'font-bold'],
     'form-t': ['py-4', 'px-9', 'items-center', 'text-center', 'font-bold', 'bg-brand', 'border-1px', 'border-[#E1F3F3]', 'border-solid'],
     'form-b': ['py-4', 'px-9', 'items-center', 'text-gray-900', 'font-bold', 'bg-[#E1F3F3]', 'bg-op-80', 'border-[0.5px]', 'border-brand', 'border-solid'],
     'form-w': ['py-4', 'px-9', 'items-center', 'text-gray-900', 'font-bold', 'bg-white', 'border-[0.5px]', 'border-brand', 'border-solid'],
