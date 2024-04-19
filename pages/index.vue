@@ -57,7 +57,7 @@ const scrollToTop = () => {
         依據客戶不同需求，以派遣方式提供客戶駕駛服務，服務涵蓋長/短期、外語專長…等公務車/主管駕駛派遣，客戶可免除招募、訓練、管理司機之繁複手續，由格上專業團隊為您代勞。
       </p>
       <img
-        class="hidden object-contain position-absolute top-133px right-[-100px] w-317px h-200px hidden"
+        class="object-contain position-absolute top-133px right-[-100px] w-317px h-200px"
         src="/tellphone.svg"
         alt="雙手握手機"
       />
@@ -179,7 +179,7 @@ const scrollToTop = () => {
   </section>
   <section class="hidden w-full bg-gray-100 pb-20">
     <PageTitle title="預約流程" pt="15" pb="15" />
-    <div class="lg:w-7/8 gap-[52px] mx-auto flex flex-wrap  pb-20">
+    <div class="lg:w-7/8 gap-[52px]   mx-auto flex flex-wrap  pb-20">
       <div
         class="lg:w-18% flex flex-col justify-center items-center bg-white p-10px rounded-3 border-solid border-1 border-brand"
       >
