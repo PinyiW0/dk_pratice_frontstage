@@ -9,7 +9,7 @@ const tabList: any[] = [
 </script>
 
 <template>
-  <secton class="w-full white flex">
+  <section class="w-full h-100dvh pt-10 pb-25 flex flex-col gap-5 items-center border-1 border-solid border-#FFD79B">
     <h2>index.vue</h2>
-  </secton>
+  </section>
 </template>
